@@ -7,9 +7,9 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: Ben
       messages:
-      - text: "Hey there! I'm Keen, your Segment guide. I'll be helping you through this quest. Let's get started!"
+      - text: "Hey there! I'm Ben, your Segment guide. I'll be helping you through this quest. Let's get started!"
       - text: "Segment is a customer data platform that helps you collect, unify, and send customer data to hundreds of tools and destinations, such as Google Analytics, Mixpanel, and Salesforce."
       - text: "It's a powerful tool that can help you unlock powerful insights, automate workflows, and drive growth and retention for your business."
       - text: "First, you'll need to create a Segment account. [You can do that here](https://app.segment.com/signup)"
@@ -17,7 +17,7 @@ startFlow:
 trigger:
   type: user_message
   params: 
-    person: keen
+    person: Ben
   flowNode:
     if:
       conditions:
@@ -26,7 +26,7 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: Ben
             messages:
             - text: "Great! Now that you have a Segment account, let's integrate it with our website."
         - actionId: finish_step
@@ -34,6 +34,6 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: Ben
             messages:
             - text: "I'm here, just let me know when you're ready to continue."

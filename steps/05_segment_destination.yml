@@ -11,7 +11,7 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: Ben
       messages:
       - text: "OK, we have a source and some events, but we now need to connect it to a destination."
       - text: "A destination is a place where you can send your data to, like Google Analytics, Amplitude, or Mixpanel."
@@ -28,7 +28,7 @@ trigger:
     do:
     - actionId: bot_message
       params:
-        person: keen
+        person: Ben
         messages:
         - text: "Awesome, we just manage to connect a source to a destination in Segment!"
     - actionId: finish_step

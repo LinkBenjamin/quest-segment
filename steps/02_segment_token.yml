@@ -9,7 +9,7 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: Ben
       messages:
       - text: "Now that you have a Segment account, let's create a new source. A source is a place where you can collect data about your users, in our case it'll be our website."
       - text: "So let's go over to the Segment dashboard and create a new Javascript website source. Once you have it, you'll be able to get your write token."
@@ -17,7 +17,7 @@ startFlow:
 trigger:
   type: user_message
   params: 
-    person: keen
+    person: Ben
   flowNode:
     if:
       conditions:
@@ -29,7 +29,7 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: Ben
             messages:
             - text: "Great! Now that you have your API token, let's integrate it with our website."
         - actionId: finish_step
@@ -37,6 +37,6 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: Ben
             messages:
             - text: "Hmmm, that doesn't look like a valid API token. Try again?"

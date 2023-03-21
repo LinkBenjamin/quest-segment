@@ -7,7 +7,7 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: Ben
       messages:
       - text: "Great, now that you have your API token, let's integrate it with our website."
       - text: "To do that, we'll need to add the Segment snippet to our website. The snippet is a small piece of code that you can add to your website to start collecting data about your users."
@@ -23,7 +23,7 @@ trigger:
           do:
           - actionId: github_pr_comment
             params:
-              person: keen
+              person: Ben
               message: "Hey @${user.githubuser}, thanks for opening this PR! I'll take a look at it shortly."
         github_pr_workflow_complete_success:
           if:
@@ -35,18 +35,18 @@ trigger:
               do:
               - actionId: bot_message
                 params:
-                  person: keen
+                  person: Ben
                   messages:
                   - text: "Nice work! You've successfully integrated Segment with our website."
               - actionId: github_pr_approve
                 params:
-                  person: keen
+                  person: Ben
                   message: "Nice work! You've successfully integrated Segment with our website."
             else:
               do:
               - actionId: github_pr_reject
                 params:
-                  person: keen
+                  person: Ben
                   message: "Looks like it's still missing something. Can you take a look?"
         github_pr_merged:
           do:
